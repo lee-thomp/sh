@@ -364,7 +364,7 @@ func (p *Printer) semiOrNewl(s string, pos Pos) {
 		p.indent()
 	} else {
 		if !p.wroteSemi {
-			p.WriteByte(';')
+			p.WriteString(" ;")
 		}
 		if !p.minify {
 			p.space()
