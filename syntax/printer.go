@@ -961,7 +961,7 @@ func (p *Printer) casePatternJoin(pats []*Word) {
 	anyNewline := false
 	for i, w := range pats {
 		if i > 0 {
-			p.spacedToken("|", Pos{})
+			p.WriteString("|")
 		}
 		if p.wantsNewline(w.Pos(), true) {
 			if !anyNewline {
@@ -969,8 +969,6 @@ func (p *Printer) casePatternJoin(pats []*Word) {
 				anyNewline = true
 			}
 			p.bslashNewl()
-		} else {
-			p.spacePad(w.Pos())
 		}
 		p.word(w)
 	}
