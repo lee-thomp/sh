@@ -5,6 +5,9 @@
 A shell parser, formatter, and interpreter. Supports [POSIX Shell], [Bash], and
 [mksh]. Requires Go 1.23 or later.
 
+> [!NOTE]
+> This is my fork with some personal style tweaks. In particular I wanted to keep spaces before semicolons and to remove spaces between multiple patterns in case matches.
+
 ### Quick start
 
 To parse shell scripts, inspect them, and print them out, see the [syntax
